@@ -5,9 +5,9 @@ import Vue from "vue";
 
 import Data from "./data/data";
 
-const UPLOAD_URL = "http://localhost:8070/admin/upload/schedule";
-const LOAD_URL = "http://localhost:8070/load/schedule";
-const DELETE_URL = "http://localhost:8070/admin/remove/schedule";
+const UPLOAD_URL = "http://192.168.50.12:8080/diary/admin/upload/schedule";
+const LOAD_URL = "http://192.168.50.12:8080/diary/load/schedule";
+const DELETE_URL = "http://192.168.50.12:8080/diary/admin/remove/schedule";
 import Navigation from  "../../../service/navigation.service";
 
 let schedule;

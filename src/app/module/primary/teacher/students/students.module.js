@@ -8,24 +8,24 @@ import Data from "./data/data";
 
 import Vue from "vue";
 
-let LOAD_ADDED_STUDENTS_URL = "http://localhost:8070/teacher/load/added/students/";
-let DELETE_ADDED_STUDENT_URL = "http://localhost:8070/teacher/remove/student/from/teacher/";
+let LOAD_ADDED_STUDENTS_URL = "http://192.168.50.12:8080/diary/teacher/load/added/students/";
+let DELETE_ADDED_STUDENT_URL = "http://192.168.50.12:8080/diary/teacher/remove/student/from/teacher/";
 
-let LOAD_PHYSICAL_DEVELOPMENTS_URL = "http://localhost:8070/student/load/physical/developments/";
-let CREATE_OR_UPDATE_PHYSICAL_DEVELOPMENT_URL = "http://localhost:8070/student/add/or/modify/physical/development";
-let DELETE_PHYSICAL_DEVELOPMENT_URL = "http://localhost:8070/student/remove/physical/development/";
+let LOAD_PHYSICAL_DEVELOPMENTS_URL = "http://192.168.50.12:8080/diary/student/load/physical/developments/";
+let CREATE_OR_UPDATE_PHYSICAL_DEVELOPMENT_URL = "http://192.168.50.12:8080/diary/student/add/or/modify/physical/development";
+let DELETE_PHYSICAL_DEVELOPMENT_URL = "http://192.168.50.12:8080/diary/student/remove/physical/development/";
 
-let LOAD_PHYSICAL_FITNESS_URL = "http://localhost:8070/student/load/physical/fitness/";
-let CREATE_OR_UPDATE_PHYSICAL_FITNESS_URL = "http://localhost:8070/student/add/or/modify/physical/fitness";
-let DELETE_PHYSICAL_FITNESS_URL = "http://localhost:8070/student/remove/physical/fitness/";
+let LOAD_PHYSICAL_FITNESS_URL = "http://192.168.50.12:8080/diary/student/load/physical/fitness/";
+let CREATE_OR_UPDATE_PHYSICAL_FITNESS_URL = "http://192.168.50.12:8080/diary/student/add/or/modify/physical/fitness";
+let DELETE_PHYSICAL_FITNESS_URL = "http://192.168.50.12:8080/diary/student/remove/physical/fitness/";
 
-let LOAD_LIFESTYLE_URL = "http://localhost:8070/student/load/lifestyle/";
-let CREATE_OR_UPDATE_LIFESTYLE_URL = "http://localhost:8070/student/add/or/modify/lifestyle";
-let DELETE_LIFESTYLE_URL = "http://localhost:8070/student/remove/lifestyle/";
+let LOAD_LIFESTYLE_URL = "http://192.168.50.12:8080/diary/student/load/lifestyle/";
+let CREATE_OR_UPDATE_LIFESTYLE_URL = "http://192.168.50.12:8080/diary/student/add/or/modify/lifestyle";
+let DELETE_LIFESTYLE_URL = "http://192.168.50.12:8080/diary/student/remove/lifestyle/";
 
-let LOAD_CONTROL_EXERCISES_URL = "http://localhost:8070/student/load/control/exercises/";
-let CREATE_OR_UPDATE_CONTROL_EXERCISES_URL = "http://localhost:8070/student/add/or/modify/control/exercise";
-let DELETE_CONTROL_EXERCISES_URL = "http://localhost:8070/student/remove/control/exercise/";
+let LOAD_CONTROL_EXERCISES_URL = "http://192.168.50.12:8080/diary/student/load/control/exercises/";
+let CREATE_OR_UPDATE_CONTROL_EXERCISES_URL = "http://192.168.50.12:8080/diary/student/add/or/modify/control/exercise";
+let DELETE_CONTROL_EXERCISES_URL = "http://192.168.50.12:8080/diary/student/remove/control/exercise/";
 
 let LOAD_URL = null;
 let CREATE_OR_UPDATE_URL = null;
@@ -60,7 +60,7 @@ export default {
                 height: 500,
                 curveType: "function",
                 pointSize: 5,
-                colors: ["#16193b"],
+                colors: ["#10382b"],
             },
             courses: [1, 2, 3, 4]
         }

@@ -17,14 +17,14 @@
         z-index: 1;
         position: absolute; top: 0; left: 0;
         width: 100%; min-width: 800px; height: 50px;
-        background: #16193B; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
+        background: #10382b; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
         font-size: 14px;
     }
     .logo, 
     .settings-btn {
         position: absolute; top: 0; height: 50px;
         line-height: 50px;
-        color: #ffffff; text-align: center;
+        color: #93adc5; text-align: center;
     }
     .logo { 
         left: 15px;
@@ -38,17 +38,17 @@
     .settings-drop {
         position: absolute; top:60px; right: 75px;
         width: 150px;
-        background: #ffffff; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
+        background: #93adc5; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
     }
     .settings-drop a {
         display: block;
         width: 100%; height: 35px; line-height: 35px;
         border-top: 1px solid #eaeaea;
         padding-left: 10px;
-        color: #16193B;
+        color: #10382b;
     }
     .settings-drop a:first-child { border-top: none; }
-    .settings-drop a:hover { text-decoration: none; border-left: 3px solid #16193B; }
+    .settings-drop a:hover { text-decoration: none; border-left: 3px solid #10382b; }
 
     /* CONTAINER STYLE */
 
@@ -64,12 +64,12 @@
         z-index: 1;
         position: absolute; left: 10px; right: 10px; bottom: 10px;
         min-width: 800px; height: 50px;
-        background: #ffffff; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
+        background: #93adc5; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
     }
     .footer div {
         height: 100%; line-height: 50px;
         padding-left: 10px;
-        font-size: 14px; color: #16193B;
+        font-size: 14px; color: #10382b;
     }
 
     .locale {
@@ -81,7 +81,7 @@
 
     .left-sidebar {
         position: absolute; top: 10px; left: 10px; bottom: 70px;
-        background: #ffffff; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
+        background: #93adc5; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
     }
     .left-sidebar a {
         display: block;
@@ -89,16 +89,16 @@
         padding-left: 10px;
         border-top: 1px solid #eaeaea;
         cursor: pointer;
-        font-size: 14px; color: #16193B;
+        font-size: 14px; color: #10382b;
     }
     .left-sidebar a:first-child { border-top: none; }
-    .left-sidebar a:hover { text-decoration: none; border-left: 3px solid #16193B; }
+    .left-sidebar a:hover { text-decoration: none; border-left: 3px solid #10382b; }
 
     /* CONTENT STYLE */
 
     .content {
         position: absolute; top: 10px; left: 220px; right: 10px; bottom: 70px;
-        background: #ffffff; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
+        background: #93adc5; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
         overflow-x: auto;
     }
 
@@ -112,7 +112,7 @@
     .modal {
         z-index: 2;
         position: fixed;
-        background: #ffffff; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
+        background: #93adc5; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
         height: auto;
     }
     .modal {
@@ -122,7 +122,7 @@
     }
     .modal-header {
         width: 100%; height: 30px;
-        background: #ffffff;
+        background: #93adc5;
     }
     .modal-body {
         width: 750px;
@@ -185,7 +185,7 @@
     .admin-modal {
         z-index: 2;
         position: fixed;
-        background: #ffffff; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
+        background: #93adc5; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
         height: auto;
     }
     .admin-modal {
@@ -195,7 +195,7 @@
     }
     .admin-modal-header {
         width: 100%; height: 30px;
-        background: #ffffff;
+        background: #93adc5;
     }
     .admin-modal-body {
         width: 500px;
@@ -234,10 +234,10 @@
         line-height: 30px
     }
     .uk-input:focus {
-        border: 1px solid #16193b;
+        border: 1px solid #10382b;
     }
     .uk-select:focus {
-        border: 1px solid #16193b;
+        border: 1px solid #10382b;
     }
     .search {
         background-image: url("https://maxcdn.icons8.com/iOS7/PNG/25/Very_Basic/search-25.png");
@@ -281,7 +281,7 @@
         margin: 0 auto;
         width: 15%;
         height: 15%;
-        background-color: #16193b;
+        background-color: #10382b;
         border-radius: 100%;
         -webkit-animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
         animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;

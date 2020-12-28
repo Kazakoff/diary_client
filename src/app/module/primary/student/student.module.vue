@@ -36,18 +36,18 @@
 
 <style>
     .isControlExercise {
-        border-left: 3px solid #16193B;
+        border-left: 3px solid #10382b;
     }
     .islifestyle {
-        border-left: 3px solid #16193B;
+        border-left: 3px solid #10382b;
     }
     .isPhysicalDevelopment {
-        border-left: 3px solid #16193B;
+        border-left: 3px solid #10382b;
     }
     .isPhysicalFitness {
-        border-left: 3px solid #16193B;
+        border-left: 3px solid #10382b;
     }
     .isTeachers {
-        border-left: 3px solid #16193B;
+        border-left: 3px solid #10382b;
     }
 </style>

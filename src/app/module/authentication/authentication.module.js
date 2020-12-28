@@ -22,7 +22,7 @@ export default {
     beforeRouteEnter (to, from, next) { next(true); },
     methods: {
         authenticate: function() {
-            this.$http.post("http://localhost:8070/authenticate", this.details).then(
+            this.$http.post("http://192.168.50.12:8080/diary/authenticate", this.details).then(
                     function(response) {
                         setToken(response.body.token);
                         setAuthority(response.body.authorities[0]);

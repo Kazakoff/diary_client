@@ -82,7 +82,7 @@
                     </select>
                 </p>
 
-                <button class="mui-btn mui-btn--raised mui-btn--primary" style="background: #16193b;" @click="commitStudent">{{ msg.edit }}</button>
+                <button class="mui-btn mui-btn--raised mui-btn--primary" style="background: #10382b;" @click="commitStudent">{{ msg.edit }}</button>
 
             </div>
 
@@ -114,7 +114,7 @@
                     <input type="text" v-model="profile.post" class="uk-input"/>
                 </p>
 
-                <button class="mui-btn mui-btn--raised mui-btn--primary" style="background: #16193b;" @click="commitTeacher">{{ msg.edit }}</button>
+                <button class="mui-btn mui-btn--raised mui-btn--primary" style="background: #10382b;" @click="commitTeacher">{{ msg.edit }}</button>
 
             </div>
 
@@ -136,7 +136,7 @@
                     <input type="text" v-model="profile.lastName" class="uk-input"/>
                 </p>
 
-                <button class="mui-btn mui-btn--raised mui-btn--primary" style="background: #16193b;" @click="commitAdmin">{{ msg.edit }}</button>
+                <button class="mui-btn mui-btn--raised mui-btn--primary" style="background: #10382b;" @click="commitAdmin">{{ msg.edit }}</button>
 
             </div>
         </div>
@@ -149,7 +149,7 @@
 <style>
     #profile {
         position: fixed; top: 60px; left: 10px; right: 10px; bottom: 70px;
-        background: #ffffff; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
+        background: #93adc5; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
         overflow-x: auto;
     }
     .profile-content {

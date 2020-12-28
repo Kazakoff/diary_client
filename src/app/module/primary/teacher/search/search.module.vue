@@ -49,7 +49,7 @@
                 </div>
                 <div class="c-modal-footer">
                     <button class="mui-btn mui-btn--danger" @click="add">{{ msg.add }}</button>
-                    <button class="mui-btn mui-btn--primary" style="background: #16193b;" @click="hideAddModal">{{ msg.cancel }}</button>
+                    <button class="mui-btn mui-btn--primary" style="background: #10382b;" @click="hideAddModal">{{ msg.cancel }}</button>
                 </div>
             </div>
         </div>

@@ -17,7 +17,7 @@
         </div>
 
         <div id="authentication-form-button-group">
-          <button class="mui-btn mui-btn--primary"  style="background: #16193b;" @click="authenticate">{{ msg.sign_in }}</button>
+          <button class="mui-btn mui-btn--primary"  style="background: #10382b;" @click="authenticate">{{ msg.sign_in }}</button>
         </div>
 
       </form>
@@ -44,7 +44,7 @@
     width: 300px;
     height: auto;
     margin: 150px auto;
-    background: #ffffff;
+    background: #93adc5;
     font-size: 16px;
   }
   #authentication-form-wrapper form {
@@ -87,7 +87,7 @@
   }
   .auth-error p {
     text-align: center;
-    color: #ffffff;
+    color: #93adc5;
     margin-top: 30px;
     padding-left: 10px;
     padding-right: 10px;

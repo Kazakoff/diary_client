@@ -44,7 +44,7 @@
 <style>
     #schedule {
         position: fixed; top: 60px; left: 10px; right: 10px; bottom: 70px;
-        background: #ffffff; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
+        background: #93adc5; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
         overflow-y: auto;
     }
 </style>

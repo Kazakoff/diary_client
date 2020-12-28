@@ -5,15 +5,15 @@ import Navigation from "../../../../service/navigation.service";
 import Vue from "vue";
 import Data from "./data/data";
 
-let LOAD_FACULTIES_URL = "http://localhost:8070/root/load/faculties";
-let CREATE_OR_UPDATE_FACULTY_URL = "http://localhost:8070/root/add/or/update/faculty";
-let DELETE_FACULTY_URL = "http://localhost:8070/root/remove/faculty/";
+let LOAD_FACULTIES_URL = "http://192.168.50.12:8080/diary/root/load/faculties";
+let CREATE_OR_UPDATE_FACULTY_URL = "http://192.168.50.12:8080/diary/root/add/or/update/faculty";
+let DELETE_FACULTY_URL = "http://192.168.50.12:8080/diary/root/remove/faculty/";
 
-let CREATE_OR_UPDATE_GROUP_URL = "http://localhost:8070/root/add/or/update/faculty/group";
-let DELETE_GROUP_URL = "http://localhost:8070/root/remove/faculty/group/";
+let CREATE_OR_UPDATE_GROUP_URL = "http://192.168.50.12:8080/diary/root/add/or/update/faculty/group";
+let DELETE_GROUP_URL = "http://192.168.50.12:8080/diary/root/remove/faculty/group/";
 
-let REGISTER_USERS_AS_ADMIN_URL ="http://localhost:8070/admin/register/users";
-let REGISTER_USERS_AS_ROOT_ADMIN_URL ="http://localhost:8070/root/register/users";
+let REGISTER_USERS_AS_ADMIN_URL ="http://192.168.50.12:8080/diary/admin/register/users";
+let REGISTER_USERS_AS_ROOT_ADMIN_URL ="http://192.168.50.12:8080/diary/root/register/users";
 
 let facultyCache = []; // TODO data from server
 

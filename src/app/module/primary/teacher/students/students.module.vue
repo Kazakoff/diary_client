@@ -75,7 +75,7 @@
                 </div>
                 <div class="c-modal-footer">
                     <button class="mui-btn mui-btn--danger" @click="removeAddedStudent">{{ msg.delete }}</button>
-                    <button class="mui-btn mui-btn--primary" style="background: #16193b;" @click="hideRemoveModal">{{ msg.cancel }}</button>
+                    <button class="mui-btn mui-btn--primary" style="background: #10382b;" @click="hideRemoveModal">{{ msg.cancel }}</button>
                 </div>
             </div>
         </div>
@@ -362,7 +362,7 @@
     .ch-modal {
         z-index: 2;
         position: fixed;
-        background: #ffffff; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
+        background: #93adc5; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
         width: 1000px;
         height: auto;
         top: 60px;  left: calc(50% - 500px);
@@ -370,7 +370,7 @@
     }
     .ch-modal-header {
         width: 100%; height: 30px;
-        background: #ffffff;
+        background: #93adc5;
     }
     .ch-modal-body {
         width: 950px;

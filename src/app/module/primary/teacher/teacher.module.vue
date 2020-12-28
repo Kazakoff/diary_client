@@ -24,9 +24,9 @@
 
 <style>
     .isSearch {
-        border-left: 3px solid #16193B;
+        border-left: 3px solid #10382b;
     }
     .isStudents {
-        border-left: 3px solid #16193B;
+        border-left: 3px solid #10382b;
     }
 </style>

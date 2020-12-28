@@ -4,15 +4,15 @@ import Navigation from  "../../../service/navigation.service";
 
 import Vue from "vue";
 
-let LOAD_STUDENT_PROFILE = "http://localhost:8070/student/load/profile/";
-let LOAD_TEACHER_PROFILE = "http://localhost:8070/teacher/load/profile/";
-let LOAD_ADMIN_PROFILE = "http://localhost:8070/admin/load/profile/";
+let LOAD_STUDENT_PROFILE = "http://192.168.50.12:8080/diary/student/load/profile/";
+let LOAD_TEACHER_PROFILE = "http://192.168.50.12:8080/diary/teacher/load/profile/";
+let LOAD_ADMIN_PROFILE = "http://192.168.50.12:8080/diary/admin/load/profile/";
 
-let LOAD_FACULTIES_URL = "http://localhost:8070/student/load/faculties";
+let LOAD_FACULTIES_URL = "http://192.168.50.12:8080/diary/student/load/faculties";
 
-let EDIT_STUDENT_URL = "http://localhost:8070/student/edit/profile";
-let EDIT_TEACHER_URL = "http://localhost:8070/teacher/edit/profile";
-let EDIT_ADMIN_URL = "http://localhost:8070/admin/edit/profile";
+let EDIT_STUDENT_URL = "http://192.168.50.12:8080/diary/student/edit/profile";
+let EDIT_TEACHER_URL = "http://192.168.50.12:8080/diary/teacher/edit/profile";
+let EDIT_ADMIN_URL = "http://192.168.50.12:8080/diary/admin/edit/profile";
 
 let faculties;
 let profile;

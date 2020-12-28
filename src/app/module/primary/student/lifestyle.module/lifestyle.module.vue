@@ -46,7 +46,19 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
+
+            <ejs-chart id="container" :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
+                <e-series-collection>
+                    <e-series :dataSource='seriesData' type='Scatter' xName='x' yName='y'>
+                    <e-trendlines>
+                            <e-trendline :type='type'>
+                            </e-trendline>
+                        </e-trendlines>
+                    </e-series>
+                </e-series-collection>
+            </ejs-chart>
+            
+         </div>
 
         <div class="modal-wrapper" v-if="modal">
             <div class="modal-background" @click="hideModal"></div>

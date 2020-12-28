@@ -68,9 +68,9 @@
 <script src="./primary.module.js"></script>
 
 <style>
-    .isHome { border-left: 3px solid #16193B; }
-    .isProfile { border-left: 3px solid #16193B; }
-    .isAbout { border-left: 3px solid #16193B; }
-    .isSchedule { border-left: 3px solid #16193B; }
-    .isRule { border-left: 3px solid #16193B; }
+    .isHome { border-left: 3px solid #10382b; }
+    .isProfile { border-left: 3px solid #10382b; }
+    .isAbout { border-left: 3px solid #10382b; }
+    .isSchedule { border-left: 3px solid #10382b; }
+    .isRule { border-left: 3px solid #10382b; }
 </style>

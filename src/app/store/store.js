@@ -8,8 +8,8 @@ Vue.use(Vuex);
 export default new Vuex.Store({
 
   state: {
-    selectedLocale: "en",
-    locale: Locales.en
+    selectedLocale: "ru",
+    locale: Locales.ru
   },
 
   mutations: {

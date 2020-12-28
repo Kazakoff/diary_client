@@ -6,9 +6,9 @@ import { searchByFullName } from "../../../../service/search.service";
 import Vue from "vue";
 import Data from "./data/data";
 
-let LOAD_URL = "http://localhost:8070/load/teachers";
-let CREATE_OR_UPDATE_URL = "http://localhost:8070/admin/add/teacher";
-let DELETE_URL = "http://localhost:8070/admin/remove/users";
+let LOAD_URL = "http://192.168.50.12:8080/diary/load/teachers";
+let CREATE_OR_UPDATE_URL = "http://192.168.50.12:8080/diary/admin/add/teacher";
+let DELETE_URL = "http://192.168.50.12:8080/diary/admin/remove/users";
 
 let cache = []; // TODO data from server
 

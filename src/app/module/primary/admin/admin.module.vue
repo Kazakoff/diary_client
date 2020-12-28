@@ -35,16 +35,16 @@
     /* NAVIGATION */
 
     .isUniversity {
-        border-left: 3px solid #16193B;
+        border-left: 3px solid #10382b;
     }
     .isAdminUser {
-        border-left: 3px solid #16193B;
+        border-left: 3px solid #10382b;
     }
     .isStudentUser {
-        border-left: 3px solid #16193B;
+        border-left: 3px solid #10382b;
     }
     .isTeacherUser {
-        border-left: 3px solid #16193B;
+        border-left: 3px solid #10382b;
     }
 
 </style>

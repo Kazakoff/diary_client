@@ -5,9 +5,9 @@ import Navigation from "../../../../service/navigation.service";
 import Vue from "vue";
 import Data from "./data/data";
 
-let LOAD_URL = "http://localhost:8070/student/load/control/exercises/";
-let CREATE_OR_UPDATE_URL = "http://localhost:8070/student/add/or/modify/control/exercise";
-let DELETE_URL = "http://localhost:8070/student/remove/control/exercise/";
+let LOAD_URL = "http://192.168.50.12:8080/diary/student/load/control/exercises/";
+let CREATE_OR_UPDATE_URL = "http://192.168.50.12:8080/diary/student/add/or/modify/control/exercise";
+let DELETE_URL = "http://192.168.50.12:8080/diary/student/remove/control/exercise/";
 
 let cache = []; // TODO data from server
 

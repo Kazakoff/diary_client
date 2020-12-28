@@ -4,7 +4,7 @@ import Navigation from "../../../../service/navigation.service";
 
 import Vue from "vue";
 
-let LOAD_URL = "http://localhost:8070/load/teachers";
+let LOAD_URL = "http://192.168.50.12:8080/diary/load/teachers";
 
 let cache = []; // TODO data from server
 

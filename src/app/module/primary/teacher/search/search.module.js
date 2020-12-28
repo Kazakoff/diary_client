@@ -5,8 +5,8 @@ import { searchByFullName } from "../../../../service/search.service";
 
 import Vue from "vue";
 
-let LOAD_URL = "http://localhost:8070/teacher/load/available/students";
-let ADD_URL = "http://localhost:8070/teacher/add/student/to/teacher";
+let LOAD_URL = "http://192.168.50.12:8080/diary/teacher/load/available/students";
+let ADD_URL = "http://192.168.50.12:8080/diary/teacher/add/student/to/teacher";
 
 let cache = []; // TODO data from server
 

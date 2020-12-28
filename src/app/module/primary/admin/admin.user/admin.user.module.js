@@ -6,10 +6,10 @@ import { searchByFullName } from "../../../../service/search.service";
 import Vue from "vue";
 import Data from "./data/data";
 
-let LOAD_URL = "http://localhost:8070/root/load/admins";
-let CREATE_ADMIN_URL = "http://localhost:8070/root/add/admin";
-let CREATE_ROOT_ADMIN_URL = "http://localhost:8070/root/add/root/admin";
-let DELETE_URL = "http://localhost:8070/root/remove/admins";
+let LOAD_URL = "http://192.168.50.12:8080/diary/root/load/admins";
+let CREATE_ADMIN_URL = "http://192.168.50.12:8080/diary/root/add/admin";
+let CREATE_ROOT_ADMIN_URL = "http://192.168.50.12:8080/diary/root/add/root/admin";
+let DELETE_URL = "http://192.168.50.12:8080/diary/root/remove/admins";
 
 let cache = []; // TODO data from server
 

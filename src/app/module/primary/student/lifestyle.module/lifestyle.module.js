@@ -4,21 +4,46 @@ import Navigation from "../../../../service/navigation.service";
 
 import Vue from "vue";
 import Data from "./data/data";
+//import VueApexCharts from 'vue-apexcharts'
 
-let LOAD_URL = "http://localhost:8070/student/load/lifestyle/";
-let CREATE_OR_UPDATE_URL = "http://localhost:8070/student/add/or/modify/lifestyle";
-let DELETE_URL = "http://localhost:8070/student/remove/lifestyle/";
+
+let LOAD_URL = "http://192.168.50.12:8080/diary/student/load/lifestyle/";
+let CREATE_OR_UPDATE_URL = "http://192.168.50.12:8080/diary/student/add/or/modify/lifestyle";
+let DELETE_URL = "http://192.168.50.12:8080/diary/student/remove/lifestyle/";
 
 let cache = []; // TODO data from server
 let filteredCache = [];
+let series1 = [];
+let yValue = [7.66, 8.03, 8.41, 8.97, 8.77, 8.20, 8.16, 7.89, 8.68, 9.48, 10.11, 11.36, 12.34, 12.60, 12.95,
+    13.91, 16.21, 17.50, 22.72, 28.14, 31.26, 31.39, 32.43, 35.52, 36.36,
+    41.33, 43.12, 45.00, 47.23, 48.62, 46.60, 45.28, 44.01, 45.17, 41.20, 43.41, 48.32, 45.65, 46.61, 53.34, 58.53];
+let point1; let i; let j = 0;
+for (i = 1973; i <= 2013; i++) {
+    point1 = { x: i, y: yValue[j] };
+    series1.push(point1); j++;
+}
+
+
 
 export default {
     name: "LifestyleModule",
+    provide: {
+        chart: [ScatterSeries, Trendlines, LineSeries]
+      },
     data: function() {
         return {
             modal: false,
             obj: clone(Data.Lifestyle),
-            courses: [1, 2, 3, 4]
+            courses: [1, 2, 3, 4],
+            seriesData: series1,
+            primaryXAxis: {
+            title: 'Months',
+            },
+            primaryYAxis: {
+            title: 'Rupees against Dollars',
+            interval: 5
+            },
+            type: 'Linear'
         }
     },
     computed: {
@@ -56,6 +81,22 @@ export default {
         displayedObjList() {
             let parameters = this.$store.state.locale.lifestyle.parameters;
             let displayedObjList = [];
+            for (let parameter of parameters) {
+                for (let i of cache) {
+                    if (parameter.id === i.parameterId) {
+                        let displayedObj = clone(i);
+                        displayedObj["name"] = parameter.name;
+                        displayedObjList.push(displayedObj);
+                    }
+                }
+            }
+            console.log(displayedObjList);
+            return displayedObjList;
+        },
+
+        chartData() {
+            let parameters = this.$store.state.locale.lifestyle.parameters;
+            let dataArr = [];
             for (let parameter of parameters) {
                 for (let i of cache) {
                     if (parameter.id === i.parameterId) {
