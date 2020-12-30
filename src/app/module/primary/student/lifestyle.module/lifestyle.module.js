@@ -5,7 +5,7 @@ import Navigation from "../../../../service/navigation.service";
 import Vue from "vue";
 import Data from "./data/data";
 //import VueApexCharts from 'vue-apexcharts'
-
+import { ChartPlugin, ScatterSeries, Trendlines, LineSeries } from "@syncfusion/ej2-vue-charts";
 
 let LOAD_URL = "http://192.168.50.12:8080/diary/student/load/lifestyle/";
 let CREATE_OR_UPDATE_URL = "http://192.168.50.12:8080/diary/student/add/or/modify/lifestyle";
@@ -13,20 +13,13 @@ let DELETE_URL = "http://192.168.50.12:8080/diary/student/remove/lifestyle/";
 
 let cache = []; // TODO data from server
 let filteredCache = [];
-let series1 = [];
-let yValue = [7.66, 8.03, 8.41, 8.97, 8.77, 8.20, 8.16, 7.89, 8.68, 9.48, 10.11, 11.36, 12.34, 12.60, 12.95,
-    13.91, 16.21, 17.50, 22.72, 28.14, 31.26, 31.39, 32.43, 35.52, 36.36,
-    41.33, 43.12, 45.00, 47.23, 48.62, 46.60, 45.28, 44.01, 45.17, 41.20, 43.41, 48.32, 45.65, 46.61, 53.34, 58.53];
-let point1; let i; let j = 0;
-for (i = 1973; i <= 2013; i++) {
-    point1 = { x: i, y: yValue[j] };
-    series1.push(point1); j++;
-}
-
 
 
 export default {
     name: "LifestyleModule",
+    components: {
+        ScatterSeries, Trendlines, LineSeries
+    },
     provide: {
         chart: [ScatterSeries, Trendlines, LineSeries]
       },
@@ -35,12 +28,13 @@ export default {
             modal: false,
             obj: clone(Data.Lifestyle),
             courses: [1, 2, 3, 4],
-            seriesData: series1,
+            seriesData: [],
+            trendData: [],
             primaryXAxis: {
-            title: 'Months',
+            title: 'Месяцы',
             },
             primaryYAxis: {
-            title: 'Rupees against Dollars',
+            title: '',
             interval: 5
             },
             type: 'Linear'
@@ -94,19 +88,55 @@ export default {
             return displayedObjList;
         },
 
-        chartData() {
+        chartData(Obj) {
+           
             let parameters = this.$store.state.locale.lifestyle.parameters;
             let dataArr = [];
-            for (let parameter of parameters) {
-                for (let i of cache) {
-                    if (parameter.id === i.parameterId) {
-                        let displayedObj = clone(i);
-                        displayedObj["name"] = parameter.name;
-                        displayedObjList.push(displayedObj);
-                    }
-                }
+
+            this.seriesData = [ 
+                { x: this.msg.september, y: parseInt(Obj.september)},
+                { x: this.msg.october, y:parseInt(Obj.october)},
+                { x: this.msg.november, y:parseInt(Obj.november)},
+                { x: this.msg.december, y:parseInt(Obj.december)},
+                { x: this.msg.january, y:parseInt(Obj.january)},
+                { x: this.msg.february, y:parseInt(Obj.february)},
+                { x: this.msg.march, y:parseInt(Obj.march)},
+                { x: this.msg.april, y:parseInt(Obj.april)},
+                { x: this.msg.may, y:parseInt(Obj.may)},
+                { x: this.msg.june, y:parseInt(Obj.june)},
+                { x: this.msg.july, y:parseInt(Obj.july)},
+                { x: this.msg.august, y:parseInt(Obj.august)}
+            ];
+
+            this.trendData = [ {x:0, y: parseInt(Obj.september)},
+                                { x:1, y:parseInt(Obj.october)},
+                                { x:2, y:parseInt(Obj.november)},
+                                { x:3, y:parseInt(Obj.december)},
+                                { x:4, y:parseInt(Obj.january)},
+                                { x:5, y:parseInt(Obj.february)},
+                                { x:6, y:parseInt(Obj.march)},
+                                { x:7, y:parseInt(Obj.april)},
+                                { x:8, y:parseInt(Obj.may)},
+                                { x:9, y:parseInt(Obj.june)},
+                                { x:10, y:parseInt(Obj.july)},
+                                { x:11, y:parseInt(Obj.august)}
+                             ];
+
+                             
+           /* let yValue = [7.66, 8.03, 8.41, 8.97, 8.77, 8.20, 8.16, 7.89, 8.68, 9.48, 10.11, 11.36, 12.34, 12.60, 12.95,
+                13.91, 16.21, 17.50, 22.72, 28.14, 31.26, 31.39, 32.43, 35.52, 36.36,
+                41.33, 43.12, 45.00, 47.23, 48.62, 46.60, 45.28, 44.01, 45.17, 41.20, 43.41, 48.32, 45.65, 46.61, 53.34, 58.53];
+            let point1; let i; let j = 0;
+            for (i = 1973; i <= 2013; i++) {
+                point1 = { x: i, y: yValue[j] };
+                this.seriesData.push(point1); j++;
             }
-            return displayedObjList;
+            */
+            this.primaryYAxis.title = Obj.name;
+            console.log("tr" + this.trendData[1].x);
+            console.log("ser" + this.seriesData[1]);
+
+            return dataArr;
         },
 
         reload() {

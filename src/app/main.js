@@ -10,8 +10,8 @@ import { ChartPlugin, ScatterSeries, Trendlines, LineSeries } from "@syncfusion/
 
 Vue.use(VueResource);
 Vue.use(VueCharts);
-Vue.use(VueApexCharts);
-//Vue.component('apexchart', VueApexCharts);
+// Vue.use(VueApexCharts);
+// Vue.component('apexchart', VueApexCharts);
 Vue.use(ChartPlugin);
 
 Vue.http.options.emulateJSON = true;
@@ -21,4 +21,4 @@ new Vue({
   store: Store,
   router: Router,
   render: h => h(ApplicationModule)
-});
+}); 
