@@ -75,7 +75,7 @@
                 </div>
                 <div class="c-modal-footer">
                     <button class="mui-btn mui-btn--danger" @click="removeAddedStudent">{{ msg.delete }}</button>
-                    <button class="mui-btn mui-btn--primary" style="background: #10382b;" @click="hideRemoveModal">{{ msg.cancel }}</button>
+                    <button class="mui-btn mui-btn--primary" style="background: #4d759a;" @click="hideRemoveModal">{{ msg.cancel }}</button>
                 </div>
             </div>
         </div>

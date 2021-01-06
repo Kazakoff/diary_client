@@ -82,7 +82,7 @@
                     </select>
                 </p>
 
-                <button class="mui-btn mui-btn--raised mui-btn--primary" style="background: #10382b;" @click="commitStudent">{{ msg.edit }}</button>
+                <button class="mui-btn mui-btn--raised mui-btn--primary" style="background: #4d759a;" @click="commitStudent">{{ msg.edit }}</button>
 
             </div>
 
@@ -114,7 +114,7 @@
                     <input type="text" v-model="profile.post" class="uk-input"/>
                 </p>
 
-                <button class="mui-btn mui-btn--raised mui-btn--primary" style="background: #10382b;" @click="commitTeacher">{{ msg.edit }}</button>
+                <button class="mui-btn mui-btn--raised mui-btn--primary" style="background: #4d759a;" @click="commitTeacher">{{ msg.edit }}</button>
 
             </div>
 
@@ -136,7 +136,7 @@
                     <input type="text" v-model="profile.lastName" class="uk-input"/>
                 </p>
 
-                <button class="mui-btn mui-btn--raised mui-btn--primary" style="background: #10382b;" @click="commitAdmin">{{ msg.edit }}</button>
+                <button class="mui-btn mui-btn--raised mui-btn--primary" style="background: #4d759a;" @click="commitAdmin">{{ msg.edit }}</button>
 
             </div>
         </div>

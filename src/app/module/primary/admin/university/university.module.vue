@@ -46,7 +46,7 @@
 				</div>
 				<div class="c-modal-footer">
 					<button class="mui-btn mui-btn--danger" @click="removeFaculty">{{ msg.delete }}</button>
-					<button class="mui-btn mui-btn--primary" style="background: #10382b;" @click="hideRemoveModal">{{ msg.cancel }}</button>
+					<button class="mui-btn mui-btn--primary" style="background: #4d759a;" @click="hideRemoveModal">{{ msg.cancel }}</button>
 				</div>
 			</div>
 		</div>
@@ -60,7 +60,7 @@
 				</div>
 				<div class="c-modal-footer">
 					<button class="mui-btn mui-btn--danger" @click="removeGroup">{{ msg.delete }}</button>
-					<button class="mui-btn mui-btn--primary" style="background: #10382b;" @click="hideRemoveGroupModal">{{ msg.cancel }}</button>
+					<button class="mui-btn mui-btn--primary" style="background: #4d759a;" @click="hideRemoveGroupModal">{{ msg.cancel }}</button>
 				</div>
 			</div>
 		</div>

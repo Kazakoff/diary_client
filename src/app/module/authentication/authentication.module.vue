@@ -17,7 +17,7 @@
         </div>
 
         <div id="authentication-form-button-group">
-          <button class="mui-btn mui-btn--primary"  style="background: #10382b;" @click="authenticate">{{ msg.sign_in }}</button>
+          <button class="mui-btn mui-btn--primary"  style="background: #4d759a;" @click="authenticate">{{ msg.sign_in }}</button>
         </div>
 
       </form>

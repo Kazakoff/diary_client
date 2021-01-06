@@ -60,7 +60,7 @@ export default {
                 height: 500,
                 curveType: "function",
                 pointSize: 5,
-                colors: ["#10382b"],
+                colors: ["#4d759a"],
             },
             courses: [1, 2, 3, 4]
         }

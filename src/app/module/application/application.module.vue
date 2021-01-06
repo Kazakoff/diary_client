@@ -17,7 +17,7 @@
         z-index: 1;
         position: absolute; top: 0; left: 0;
         width: 100%; min-width: 800px; height: 50px;
-        background: #10382b; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
+        background: #4d759a; 
         font-size: 14px;
     }
     .logo, 
@@ -45,10 +45,10 @@
         width: 100%; height: 35px; line-height: 35px;
         border-top: 1px solid #87c1cc;
         padding-left: 10px;
-        color: #10382b;
+        color: #4d759a;
     }
     .settings-drop a:first-child { border-top: none; }
-    .settings-drop a:hover { text-decoration: none; border-left: 3px solid #10382b; }
+    .settings-drop a:hover { text-decoration: none; border-left: 3px solid #4d759a; }
 
     /* CONTAINER STYLE */
 
@@ -64,12 +64,12 @@
         z-index: 1;
         position: absolute; left: 10px; right: 10px; bottom: 10px;
         min-width: 800px; height: 50px;
-        background: #87c1cc; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
+        background: #87c1cc; 
     }
     .footer div {
         height: 100%; line-height: 50px;
         padding-left: 10px;
-        font-size: 14px; color: #10382b;
+        font-size: 14px; color: #4d759a;
     }
 
     .locale {
@@ -81,7 +81,7 @@
 
     .left-sidebar {
         position: absolute; top: 10px; left: 10px; bottom: 70px;
-        background: #87c1cc; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
+        background: #87c1cc; 
     }
     .left-sidebar a {
         display: block;
@@ -89,16 +89,16 @@
         padding-left: 10px;
         border-top: 1px solid #87c1cc;
         cursor: pointer;
-        font-size: 14px; color: #10382b;
+        font-size: 14px; color: #4d759a;
     }
     .left-sidebar a:first-child { border-top: none; }
-    .left-sidebar a:hover { text-decoration: none; border-left: 3px solid #10382b; }
+    .left-sidebar a:hover { text-decoration: none; border-left: 3px solid #4d759a; }
 
     /* CONTENT STYLE */
 
     .content {
         position: absolute; top: 10px; left: 220px; right: 10px; bottom: 70px;
-        background: #87c1cc; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
+        background: #87c1cc; 
         overflow-x: auto;
     }
 
@@ -234,10 +234,10 @@
         line-height: 30px
     }
     .uk-input:focus {
-        border: 1px solid #10382b;
+        border: 1px solid #4d759a;
     }
     .uk-select:focus {
-        border: 1px solid #10382b;
+        border: 1px solid #4d759a;
     }
     .search {
         background-image: url("https://maxcdn.icons8.com/iOS7/PNG/25/Very_Basic/search-25.png");
@@ -281,7 +281,7 @@
         margin: 0 auto;
         width: 15%;
         height: 15%;
-        background-color: #10382b;
+        background-color: #4d759a;
         border-radius: 100%;
         -webkit-animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
         animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
