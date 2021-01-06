@@ -24,7 +24,7 @@
     .settings-btn {
         position: absolute; top: 0; height: 50px;
         line-height: 50px;
-        color: #93adc5; text-align: center;
+        color: #87c1cc; text-align: center;
     }
     .logo { 
         left: 15px;
@@ -38,12 +38,12 @@
     .settings-drop {
         position: absolute; top:60px; right: 75px;
         width: 150px;
-        background: #93adc5; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
+        background: #87c1cc; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
     }
     .settings-drop a {
         display: block;
         width: 100%; height: 35px; line-height: 35px;
-        border-top: 1px solid #eaeaea;
+        border-top: 1px solid #87c1cc;
         padding-left: 10px;
         color: #10382b;
     }
@@ -55,7 +55,7 @@
     .container {
         position: absolute; top: 50px; left: 0; right: 0; bottom: 0;
         width: 100%; min-width: 800px;
-        background-color: #eaeaea;
+        background-color: #87c1cc;
     }
 
     /* FOOTER STYLE */
@@ -64,7 +64,7 @@
         z-index: 1;
         position: absolute; left: 10px; right: 10px; bottom: 10px;
         min-width: 800px; height: 50px;
-        background: #93adc5; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
+        background: #87c1cc; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
     }
     .footer div {
         height: 100%; line-height: 50px;
@@ -81,13 +81,13 @@
 
     .left-sidebar {
         position: absolute; top: 10px; left: 10px; bottom: 70px;
-        background: #93adc5; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
+        background: #87c1cc; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
     }
     .left-sidebar a {
         display: block;
         width: 200px; height: 35px; line-height: 35px;
         padding-left: 10px;
-        border-top: 1px solid #eaeaea;
+        border-top: 1px solid #87c1cc;
         cursor: pointer;
         font-size: 14px; color: #10382b;
     }
@@ -98,7 +98,7 @@
 
     .content {
         position: absolute; top: 10px; left: 220px; right: 10px; bottom: 70px;
-        background: #93adc5; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
+        background: #87c1cc; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
         overflow-x: auto;
     }
 
@@ -112,7 +112,7 @@
     .modal {
         z-index: 2;
         position: fixed;
-        background: #93adc5; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
+        background: #87c1cc; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
         height: auto;
     }
     .modal {
@@ -122,7 +122,7 @@
     }
     .modal-header {
         width: 100%; height: 30px;
-        background: #93adc5;
+        background: #87c1cc;
     }
     .modal-body {
         width: 750px;
@@ -185,7 +185,7 @@
     .admin-modal {
         z-index: 2;
         position: fixed;
-        background: #93adc5; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
+        background: #87c1cc; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
         height: auto;
     }
     .admin-modal {
@@ -195,7 +195,7 @@
     }
     .admin-modal-header {
         width: 100%; height: 30px;
-        background: #93adc5;
+        background: #87c1cc;
     }
     .admin-modal-body {
         width: 500px;

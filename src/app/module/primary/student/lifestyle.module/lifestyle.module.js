@@ -5,7 +5,7 @@ import Navigation from "../../../../service/navigation.service";
 import Vue from "vue";
 import Data from "./data/data";
 //import VueApexCharts from 'vue-apexcharts'
-import { ChartPlugin, ScatterSeries, Trendlines, LineSeries } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, ScatterSeries, Trendlines, LineSeries, Category } from "@syncfusion/ej2-vue-charts";
 
 let LOAD_URL = "http://192.168.50.12:8080/diary/student/load/lifestyle/";
 let CREATE_OR_UPDATE_URL = "http://192.168.50.12:8080/diary/student/add/or/modify/lifestyle";
@@ -21,7 +21,7 @@ export default {
         ScatterSeries, Trendlines, LineSeries
     },
     provide: {
-        chart: [ScatterSeries, Trendlines, LineSeries]
+        chart: [ScatterSeries, Trendlines, LineSeries, Category]
       },
     data: function() {
         return {
@@ -29,15 +29,16 @@ export default {
             obj: clone(Data.Lifestyle),
             courses: [1, 2, 3, 4],
             seriesData: [],
-            trendData: [],
             primaryXAxis: {
-            title: 'Месяцы',
+                title: 'Месяцы',
+                valueType: 'Category',
+                interval: 1
             },
             primaryYAxis: {
-            title: '',
-            interval: 5
+                title: '',
             },
-            type: 'Linear'
+            type: 'Linear',
+            title: "Выберете параметр в таблице",
         }
     },
     computed: {
@@ -122,20 +123,9 @@ export default {
                                 { x:11, y:parseInt(Obj.august)}
                              ];
 
-                             
-           /* let yValue = [7.66, 8.03, 8.41, 8.97, 8.77, 8.20, 8.16, 7.89, 8.68, 9.48, 10.11, 11.36, 12.34, 12.60, 12.95,
-                13.91, 16.21, 17.50, 22.72, 28.14, 31.26, 31.39, 32.43, 35.52, 36.36,
-                41.33, 43.12, 45.00, 47.23, 48.62, 46.60, 45.28, 44.01, 45.17, 41.20, 43.41, 48.32, 45.65, 46.61, 53.34, 58.53];
-            let point1; let i; let j = 0;
-            for (i = 1973; i <= 2013; i++) {
-                point1 = { x: i, y: yValue[j] };
-                this.seriesData.push(point1); j++;
-            }
-            */
-            this.primaryYAxis.title = Obj.name;
-            console.log("tr" + this.trendData[1].x);
-            console.log("ser" + this.seriesData[1]);
 
+            this.primaryYAxis.title = Obj.name;
+            this.title = Obj.name;
             return dataArr;
         },
 

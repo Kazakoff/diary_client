@@ -47,22 +47,14 @@
                 </tbody>
             </table>
 
-            <ejs-chart id="container" :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
+            <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
                 <e-series-collection>
-                    <e-series :dataSource='trendData' type='Scatter' xName='x' yName='y'>
-                    <e-trendlines>
-                            <e-trendline :type='type'>
-                            </e-trendline>
-                    </e-trendlines>
-                    </e-series>
-                      <e-series :dataSource='seriesData' type='Scatter' xName='x' yName='y'>
+                        <e-series :dataSource='seriesData' type='Line' xName='x' yName='y'>
                             <e-trendlines>
                             <e-trendline :type='type'>
                             </e-trendline>
                     </e-trendlines>
                     </e-series>
-
-
                 </e-series-collection>
             </ejs-chart>
             

@@ -40,7 +40,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                <tr v-for="displayedObj in displayedObjList()">
+                <tr v-for="displayedObj in displayedObjList()" v-on:click="chartData(displayedObj)">
                     <td class="uk-table-expand">{{ displayedObj.name }}</td>
 
                     <td>{{ displayedObj.firstCourseBeginningResult }}</td>
@@ -72,6 +72,18 @@
                 </tr>
                 </tbody>
             </table>
+
+            <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
+                <e-series-collection>
+                        <e-series :dataSource='seriesData' type='Line' xName='x' yName='y'>
+                            <e-trendlines>
+                            <e-trendline :type='type'>
+                            </e-trendline>
+                    </e-trendlines>
+                    </e-series>
+                </e-series-collection>
+            </ejs-chart>
+
         </div>
 
         <div class="modal-wrapper" v-if="modal">

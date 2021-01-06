@@ -168,12 +168,12 @@
     .c-modal {
         z-index: 2;
         position: fixed; top: 150px;  left: calc(50% - 275px);
-        background: #93adc5; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
+        background: #87c1cc; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
         width: 550px; height: auto;
     }
     .c-modal-header {
         width: 100%; height: 30px;
-        background: #93adc5;
+        background: #87c1cc;
     }
     .c-modal-body {
         width: 500px;

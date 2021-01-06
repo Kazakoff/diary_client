@@ -4,6 +4,7 @@ import Navigation from "../../../../service/navigation.service";
 
 import Vue from "vue";
 import Data from "./data/data";
+import { ChartPlugin, ScatterSeries, Trendlines, LineSeries, Category } from "@syncfusion/ej2-vue-charts";
 
 let LOAD_URL = "http://192.168.50.12:8080/diary/student/load/control/exercises/";
 let CREATE_OR_UPDATE_URL = "http://192.168.50.12:8080/diary/student/add/or/modify/control/exercise";
@@ -13,10 +14,27 @@ let cache = []; // TODO data from server
 
 export default {
     name: "ControlExerciseModule",
+    components: {
+        ScatterSeries, Trendlines, LineSeries
+    },
+    provide: {
+        chart: [ScatterSeries, Trendlines, LineSeries, Category]
+      },
     data: function() {
         return {
             modal: false,
-            obj: clone(Data.ControlExercise)
+            obj: clone(Data.ControlExercise),
+            seriesData: [],
+            primaryXAxis: {
+                title: 'Период',
+                valueType: 'Category',
+                interval: 1
+            },
+            primaryYAxis: {
+                title: '',
+            },
+            type: 'Linear',
+            title: "Выберете параметр в таблице",
         }
     },
     computed: {
@@ -65,7 +83,45 @@ export default {
             }
             return displayedObjList;
         },
+        chartData(Obj) {
+            let parameters = this.$store.state.locale.control_exercise.parameters;
+            let dataArr = [];
 
+            this.seriesData = [ 
+                { x: this.msg.first_course_beginning, y: parseInt(Obj.firstCourseBeginningResult)}, 
+               // { x: this.msg.firstCourseBeginningRating, y: parseInt(Obj. firstCourseBeginningRating)},
+
+                { x: this.msg.semester_1, y: parseInt(Obj.semester1Result)},
+                //{ x: this.msg.semester1Rating, y: parseInt(Obj.semester1Rating)}, 
+
+                { x: this.msg.semester_2, y: parseInt(Obj.semester2Result)},
+                //{ x: this.msg.semester2Rating, y: parseInt(Obj.semester2Rating)},
+
+                { x: this.msg.second_course_beginning, y: parseInt(Obj.secondCourseBeginningResult)},
+                //{ x: this.msg.secondCourseBeginningRating, y: parseInt(Obj.secondCourseBeginningRating)},
+
+                { x: this.msg.semester_3, y: parseInt(Obj.semester3Result)}, 
+                //{ x: this.msg.semester3Rating, y: parseInt(Obj.semester3Rating )},
+
+                { x: this.msg.semester_4, y: parseInt(Obj.semester4Result)}, 
+               // { x: this.msg.semester4Rating, y: parseInt(Obj.semester4Rating)}, 
+
+                { x: this.msg.third_course_beginning, y: parseInt(Obj.thirdCourseBeginningResult )},
+                //{ x: this.msg.thirdCourseBeginningRating, y: parseInt(Obj.thirdCourseBeginningRating)}, 
+
+                { x: this.msg.semester_5, y: parseInt(Obj.semester5Result)}, 
+                //{ x: this.msg.semester5Rating, y: parseInt(Obj.semester5Rating)}, 
+
+                { x: this.msg.semester_6, y: parseInt(Obj.semester6Result )},
+               // { x: this.msg.semester6Rating, y: parseInt(Obj.semester6Rating )}
+
+            ];
+
+            //this.primaryYAxis.title = Obj.name;
+            this.title = Obj.name;
+            //console.log(Obj);
+            return dataArr;
+        },
         reload() { this.obj = load(this.obj.parameterId); },
 
         showModal() {

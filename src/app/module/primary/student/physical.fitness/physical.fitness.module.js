@@ -4,6 +4,7 @@ import Navigation from "../../../../service/navigation.service";
 
 import Vue from "vue";
 import Data from "./data/data";
+import { ChartPlugin, ScatterSeries, Trendlines, LineSeries, Category } from "@syncfusion/ej2-vue-charts";
 
 let LOAD_URL = "http://192.168.50.12:8080/diary/student/load/physical/fitness/";
 let CREATE_OR_UPDATE_URL = "http://192.168.50.12:8080/diary/student/add/or/modify/physical/fitness";
@@ -13,10 +14,27 @@ let cache = []; // TODO data from server
 
 export default {
     name: "PhysicalFitnessModule",
+    components: {
+        ScatterSeries, Trendlines, LineSeries
+    },
+    provide: {
+        chart: [ScatterSeries, Trendlines, LineSeries, Category]
+      },
     data: function() {
         return {
             modal: false,
-            obj: clone(Data.PhysicalFitness)
+            obj: clone(Data.PhysicalFitness),
+            seriesData: [],
+            primaryXAxis: {
+                title: 'Период',
+                valueType: 'Category',
+                interval: 1
+            },
+            primaryYAxis: {
+                title: '',
+            },
+            type: 'Linear',
+            title: "Выберете параметр в таблице",
         }
     },
     computed: {
@@ -65,7 +83,27 @@ export default {
             }
             return displayedObjList;
         },
+        chartData(Obj) {
+            let parameters = this.$store.state.locale.control_exercise.parameters;
+            let dataArr = [];
+            console.log(Obj);
+            this.seriesData = [ 
+                { x: this.msg.first_course_beginning, y: parseInt(Obj.firstCourseBeginning)}, 
+                { x: this.msg.semester_1, y: parseInt(Obj.semester1)},
+                { x: this.msg.semester_2, y: parseInt(Obj.semester2)},
+                { x: this.msg.second_course_beginning, y: parseInt(Obj.secondCourseBeginning)},
+                { x: this.msg.semester_3, y: parseInt(Obj.semester3)}, 
+                 { x: this.msg.semester_4, y: parseInt(Obj.semester4)}, 
+                 { x: this.msg.third_course_beginning, y: parseInt(Obj.thirdCourseBeginning)},
+                 { x: this.msg.semester_5, y: parseInt(Obj.semester5)}, 
+                 { x: this.msg.semester_6, y: parseInt(Obj.semester6)},
+            ];
 
+            this.primaryYAxis.title = Obj.name;
+            this.title = Obj.name;
+            console.log(this.seriesData);
+            return dataArr;
+        },
         reload() { this.obj = load(this.obj.parameterId); },
 
         showModal() {

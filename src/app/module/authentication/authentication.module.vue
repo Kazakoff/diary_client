@@ -44,7 +44,7 @@
     width: 300px;
     height: auto;
     margin: 150px auto;
-    background: #93adc5;
+    background: #87c1cc;
     font-size: 16px;
   }
   #authentication-form-wrapper form {
@@ -87,7 +87,7 @@
   }
   .auth-error p {
     text-align: center;
-    color: #93adc5;
+    color: #87c1cc;
     margin-top: 30px;
     padding-left: 10px;
     padding-right: 10px;

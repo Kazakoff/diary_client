@@ -21,7 +21,7 @@
 <style>
     #about {
         position: fixed; top: 60px; left: 10px; right: 10px; bottom: 70px;
-        background: #93adc5; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
+        background: #87c1cc; box-shadow: 0 1px 4px rgba(84, 83, 83, 0.7);
         overflow-x: auto;
     }
 </style>
